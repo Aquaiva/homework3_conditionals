@@ -18,7 +18,7 @@ public class Main {
         if (temperature < 5) {
             System.out.println("Сегодня холодно, температура на улице: " + temperature + ". Следует надеть шапку");
         }
-        if (temperature > 5) {
+        else  {
             System.out.println("Сегодня тепло, температура на улице: " + temperature + ". Можно выходить без шапки");
         }
 
@@ -36,9 +36,9 @@ public class Main {
 
 
         byte yearsOld = 20;
-        boolean kindergartenAge = (yearsOld > 2 && yearsOld < 7);
-        boolean schoolAge = (yearsOld > 7 && yearsOld < 17);
-        boolean universityAge = (yearsOld > 17 && yearsOld < 24);
+        boolean kindergartenAge = (yearsOld >= 2 && yearsOld <= 7);
+        boolean schoolAge = (yearsOld >= 7 && yearsOld <= 17);
+        boolean universityAge = (yearsOld >= 17 && yearsOld <= 24);
         boolean workAge = (yearsOld > 24);
         if (kindergartenAge) {
             System.out.println("Если возраст человека равен " + yearsOld +", то ему нужно ходить в детский сад");
@@ -58,7 +58,7 @@ public class Main {
         if (childAge < 5) {
             System.out.println("Если возраст ребёнка равен " + childAge + ", то ему нельзя кататься на аттракционе");
         }
-        if (childAge > 5 && childAge < 14) {
+        if (childAge >= 5 && childAge < 14) {
             System.out.println("Если возраст ребёнка равен " + childAge + ", то ему можно кататься на аттракционе только в сопровождении взрослого");
         }
         if (childAge > 14) {
