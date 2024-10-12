@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        byte age;
-        age = 20;
-        if (age >= 18) {
+        byte humanAge;
+        humanAge = 20;
+        if (humanAge >= 18) {
             System.out.println("Человек достиг совершеннолетия");
         } else {
             System.out.println("Человек еще не достиг совершеннолетия, нужно ещё подождать");
@@ -23,26 +23,33 @@ public class Main {
         }
 
 
-        short speed = 120;
-        if (speed > 60) {
+        short speed = 40;
+        short speedLimit = 60;
+        boolean speeding = speed > speedLimit;
+
+        if (speeding) {
             System.out.println("Если скорость " + speed + ", то придётся заплатить штраф");
         }
-        if (speed < 60) {
+        else {
             System.out.println("Если скорость " + speed + ", можно ездить спокойно");
         }
 
 
         byte yearsOld = 20;
-        if (yearsOld > 2 && yearsOld < 7) {
+        boolean kindergartenAge = (yearsOld > 2 && yearsOld < 7);
+        boolean schoolAge = (yearsOld > 7 && yearsOld < 17);
+        boolean universityAge = (yearsOld > 17 && yearsOld < 24);
+        boolean workAge = (yearsOld > 24);
+        if (kindergartenAge) {
             System.out.println("Если возраст человека равен " + yearsOld +", то ему нужно ходить в детский сад");
         }
-        if (yearsOld > 7 && yearsOld < 17) {
+        if (schoolAge) {
             System.out.println("Если возраст человека равен " + yearsOld + ", то ему нужно ходить в школу");
         }
-        if (yearsOld > 17 && yearsOld < 24) {
+        if (universityAge) {
             System.out.println("Если возраст человека равен " + yearsOld + ", то ему нужно ходить университет");
         }
-        if (yearsOld > 24) {
+        if (workAge) {
             System.out.println("Если возраст человека равен " + yearsOld + ", то ему нужно ходить на работу");
         }
 
@@ -52,12 +59,10 @@ public class Main {
             System.out.println("Если возраст ребёнка равен " + childAge + ", то ему нельзя кататься на аттракционе");
         }
         if (childAge > 5 && childAge < 14) {
-            System.out.println("Если возраст ребёнка равен " + childAge + ", то ему можно кататься на аттракционе" +
-                    " только в сопровождении взрослого");
+            System.out.println("Если возраст ребёнка равен " + childAge + ", то ему можно кататься на аттракционе только в сопровождении взрослого");
         }
         if (childAge > 14) {
-            System.out.println("Если ребёнку уже исполнилось " + childAge + ", то ему можно посещать аттракцион" +
-                    " без сопровождения взрослого");
+            System.out.println("Если ребёнку уже исполнилось " + childAge + ", то ему можно посещать аттракцион без сопровождения взрослого");
         }
 
 
